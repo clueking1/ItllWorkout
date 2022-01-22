@@ -17,7 +17,7 @@ html, body {
 }
 
 .modalContainer.show {
-    display: inline-block;
+    display: flex;
 }
 
 .modal {
