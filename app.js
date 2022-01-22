@@ -46,19 +46,10 @@
     closeModalButton.addEventListener('click', closePopup);
     
     function getUserPhoto() {
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var response = JSON.parse(this.responseText);
-                console.log(response);
-                var img = response.results[0].picture.large;
-                profileImage.style.background = `url(${img})`;
-                profileImage.style.backgroundSize = 'cover';
-                profileImage.style.backgroundPostition = 'center center';
-            }
-        };
-        xhttp.open('POST', 'https://randomuser.me/api/' );
-        xhttp.send();
+        var img = `https://randomuser.me/api/portraits/men/${Math.floor(Math.random() * 100)}.jpg`;
+        profileImage.style.background = `url(${img})`;
+        profileImage.style.backgroundSize = 'cover';
+        profileImage.style.backgroundPostition = 'center center';
     }
 
     function populateFields() {
