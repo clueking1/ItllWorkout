@@ -35,7 +35,7 @@
 
     var confirmButton = document.querySelector('[data-confirm]'),
         declineButton = document.querySelector('[data-decline]'),
-        confirmationPopup = document.querySelector('.modal-container'),
+        confirmationPopup = document.querySelector('.modalContainer'),
         closeModalButton = document.querySelector('.noModal');
 
     populateFields();
