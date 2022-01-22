@@ -42,7 +42,19 @@
 
     confirmButton.addEventListener('click', confirmUser);
     declineButton.addEventListener('click', declineUser);
-    noModal.addEventListener('click', closePopup);
+    closeModalButton.addEventListener('click', closePopup);
+    
+    function getUserPhoto() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var response = JSON.parse(this.responseText);
+                var img = response.results[0].picture.large;
+            }
+        };
+        xhttp.open('POST', 'https://randomuser.me/api/' );
+        xhttp.send();
+    }
 
     function populateFields() {
         var user = randomUser[Math.floor(Math.random() * randomUser.length)];
