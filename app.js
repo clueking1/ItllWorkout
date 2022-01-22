@@ -50,6 +50,7 @@
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var response = JSON.parse(this.responseText);
+                console.log(response);
                 var img = response.results[0].picture.large;
                 profileImage.style.background = `url(${img})`;
                 profileImage.style.backgroundSize = 'cover';
