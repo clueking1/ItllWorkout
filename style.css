@@ -182,3 +182,11 @@ h1 {
     top: -0.3em;
     left: 0.15em;
 }
+
+
+.noModal::after {
+    content: "\000D7";
+    color: #f44;
+    top: -0.3em;
+    left: 0.15em;
+}
