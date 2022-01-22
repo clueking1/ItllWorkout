@@ -165,7 +165,7 @@ h1 {
     position: relative;
 }
 
-.yes::after, .no::after {
+.yes::after, .no::after, .noModal::after {
     font-size: 2em;
     position: absolute;
 }
