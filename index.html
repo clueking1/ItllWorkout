@@ -1,4 +1,4 @@
-<!Doctype html>
+!Doctype html>
 <html>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,40 +11,39 @@
         <div id="container">
             <div class="modalContainer">
                 <div class="modal">Appointment confirmed with Tom!<i class="noModal"></i></div>
-            </div>
+            </div><
             <div class="center">
                 <h1><img src="./logo.png" alt="logo"> It'll workout</h1><br/>
                 <h2>Don't workout alone, find your perfect match today!</h2>
             </div>
             <div id="profile-wrapper">
                 <div id="profile-spotlight">
-                    <div id="profile-image"></div>
+                    <div id="profile-image">
+                    </div>
                     <div>
                         <div id="profile-details">
-                            <h3>Tom Person</h3>
+                            <h3><span class="firstName"></span> <span class="lastName"></span></h3>
                             <div>
-                                <p><b><i class="fa fa-birthday-cake"></i> Age:</b> 31</p>
-                                <p><b><i class="fa fa-map-pin"></i> Location:</b> 13 Miles away</p>
-                                <p><b><i class="fa fa-briefcase"></i> Occupation:</b> Lawyer</p>
-                                <p><b><i class="fa fa-calendar"></i> Last workout:</b> Thursday Jan 20 2022.</p>
+                                <p><b><i class="fa fa-birthday-cake"></i> Age:</b> <span class="age"></span></p>
+                                <p><b><i class="fa fa-map-pin"></i> Location:</b> <span class="distance"></span></p>
+                                <p><b><i class="fa fa-briefcase"></i> Occupation:</b> <span class="occupation"></span></p>
+                                <p><b><i class="fa fa-calendar"></i> Last workout:</b> <span class="lastWorkout"></span></p>
                             </div>
                             <hr/>
                             <div>
                                 <div>
-                                    <b>What is Tom looking for?</b>
-                                    <p>I am looking for my perfect workout partner, someone who just wants to share a treadmill for a 20 minute workout.</p>
+                                    <b>What is <span class="firstName"></span> looking for?</b>
+                                    <p><span class="bio"></span></p>
                                 </div>
                             </div>
                             <hr/>
                             <div>
-                                <b>What does Tom's trainer say about tom?</b>
-                                <p>He's aight. Room to improve, but he's single.</p>
+                                <b>What does <span class="firstName"></span>'s trainer say about tom?</b>
+                                <p><span class="trainerNotes"></span></p>
                             </div>
                         </div>
-                        <div class="btnContainer">
-                        <a class="btn">Workout with Tom <i class="yes"></i></a>
-                        <a class="btn alt">Don't Workout with Tom <i class="no"></i></a>
-                        </div>
+                        <a data-confirm class="btn">Workout with <span class="firstName"></span> <i class="yes"></i></a>
+                        <a data-decline class="btn alt">Don't Workout with <span class="firstName"></span> <i class="no"></i></a>
                     </div>
                 </div>
             </div>
@@ -52,3 +51,4 @@
         </div>
     </body>
 </html>
+<script src="app.js"></script>
