@@ -69,6 +69,7 @@
                 el.innerHTML = value;
             });
         }
+        getUserPhoto();
     }
 
     function confirmUser() {
