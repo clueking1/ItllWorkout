@@ -36,7 +36,8 @@
     var confirmButton = document.querySelector('[data-confirm]'),
         declineButton = document.querySelector('[data-decline]'),
         confirmationPopup = document.querySelector('.modalContainer'),
-        closeModalButton = document.querySelector('.noModal');
+        closeModalButton = document.querySelector('.noModal'),
+        profileImage = document.querySelector('#profile-image');
 
     populateFields();
 
@@ -50,6 +51,9 @@
             if (this.readyState == 4 && this.status == 200) {
                 var response = JSON.parse(this.responseText);
                 var img = response.results[0].picture.large;
+                profileImage.style.background = `url(${img})`;
+                profileImage.style.backgroundSize = 'cover';
+                profileImage.style.backgroundPostition = 'center center';
             }
         };
         xhttp.open('POST', 'https://randomuser.me/api/' );
